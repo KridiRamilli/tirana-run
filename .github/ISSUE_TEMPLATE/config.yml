@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Product scope and roadmap
+    url: https://github.com/KridiRamilli/tirana-run/tree/main/docs
+    about: Check the accepted scope and planned phases before opening an issue.
+
