@@ -1,0 +1,46 @@
+name: Bug report
+description: Report reproducible behavior that conflicts with the accepted product
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Openâ€¦\n2. Tapâ€¦\n3. Observeâ€¦"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, OS, and device
+    validations:
+      required: true
+  - type: dropdown
+    id: location
+    attributes:
+      label: Location permission state
+      options: [Not relevant, Not requested, Granted, Denied, Unavailable or timed out]
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots, logs, or other evidence
+  - type: textarea
+    id: impact
+    attributes:
+      label: User impact and workaround
+
