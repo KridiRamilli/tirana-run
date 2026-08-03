@@ -1,0 +1,55 @@
+name: Product or feature work
+description: Propose a scoped product increment for Tirana Run
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Confirm alignment with the fixed-route PWA scope before proposing implementation.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: User outcome
+      description: Who benefits, what can they do, and why does it matter?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      description: List the smallest behavior this issue delivers.
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: Explicitly list adjacent work that is deferred.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] Observable, testable outcome"
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: Automated checks, device/browser checks, screenshots, and accessibility evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and open decisions
+  - type: checkboxes
+    id: scope-check
+    attributes:
+      label: Scope check
+      options:
+        - label: This keeps one fixed route and does not introduce unrelated product scope.
+          required: true
+
