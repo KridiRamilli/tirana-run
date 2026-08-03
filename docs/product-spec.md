@@ -25,13 +25,18 @@ The initial audience is a resident or visitor who wants a simple, active way to 
 - Start, active, paused/stopped, completed, permission-denied, and location-unavailable states.
 - Current-position display when permission is granted.
 - Basic session time and distance/progress derived in the browser where feasible.
+- The fixed route can be joined from the nearest suitable point while retaining its approved geometry and ordered stops.
+- Steps shown for a Tirana Run session are estimates derived from recorded distance and stride length, and are labelled accordingly.
+- A lightweight local profile stores display name, language, step goal, stride preference, and audio preference without requiring an account.
 - Clear privacy copy: location is used for the active experience and is not silently uploaded.
 
 ## Later phases
 
 - Audio guide content and playback for stops.
+- Albanian and English UI, historical content, audio, and completion assets.
 - Deliberate offline caching of the app shell, route data, stop content, and eligible assets.
 - More resilient session persistence and richer personal statistics.
+- Completion badge generation and sharing through the Web Share API, with image download and copy fallbacks.
 
 These are planned capabilities, not MVP acceptance criteria.
 
@@ -39,8 +44,8 @@ These are planned capabilities, not MVP acceptance criteria.
 
 - Multiple routes or a route builder.
 - Turn-by-turn navigation or guaranteed safety routing.
-- Social, leaderboard, competition, or live sharing features.
-- Accounts, cloud sync, admin CMS, payments, or monetization.
+- Social feeds, leaderboards, competitions, or live-location sharing. A user-initiated completion share card remains in scope.
+- Required accounts, admin CMS, payments, or monetization. Optional cloud backup/sync may be considered later.
 - Native iOS/Android apps.
 
 ## Success criteria
@@ -57,4 +62,6 @@ These are planned capabilities, not MVP acceptance criteria.
 - Historical copy, language strategy, and editorial review owner.
 - Map style/provider and its usage terms.
 - Exact definition of route progress and completion tolerance under noisy GPS.
+- Final Albanian/English editorial and audio production workflow.
+- Local-profile schema and optional future sync contract.
 

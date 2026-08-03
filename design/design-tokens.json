@@ -1,0 +1,19 @@
+{
+  "referenceViewport": { "width": 390, "height": 844 },
+  "colors": {
+    "primary": "#45A914",
+    "primaryDark": "#0B5C24",
+    "primaryLime": "#70C919",
+    "background": "#FAFBF8",
+    "surface": "#FFFFFF",
+    "surfaceMuted": "#F6F8F1",
+    "textPrimary": "#103D22",
+    "textSecondary": "#5F6D63",
+    "border": "#E4E9DF",
+    "danger": "#D92D20"
+  },
+  "radius": { "small": 12, "medium": 20, "large": 28, "pill": 999 },
+  "spacing": { "xs": 4, "sm": 8, "md": 16, "lg": 24, "xl": 32 },
+  "components": { "pagePadding": 20, "primaryButtonHeight": 56, "bottomNavigationHeight": 76, "minimumTouchTarget": 44 },
+  "visualRegression": { "viewport": "390x844", "maxDiffPixelRatio": 0.01, "spacingTolerancePx": 4, "fontSizeTolerancePx": 1, "radiusTolerancePx": 2 }
+}

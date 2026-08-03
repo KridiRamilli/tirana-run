@@ -34,7 +34,7 @@ Exit: a user can follow the fixed route during a walking session without losing 
 
 - Finalize reviewed stop content and responsive stop details.
 - Improve route-to-stop discovery and accessibility.
-- Add localization only after the content language decision is accepted.
+- Provide Albanian and English UI/content switching backed by the local profile.
 
 Exit: every approved stop has consistent, reviewed, accessible historical content.
 
@@ -43,6 +43,7 @@ Exit: every approved stop has consistent, reviewed, accessible historical conten
 - Add accessible audio controls, transcripts, and stop association.
 - Define and implement an explicit cache strategy for shell, route, content, and eligible media/map resources.
 - Provide clear downloaded/offline state and storage/error handling.
+- Generate the Tirana Run Finisher badge and approved achievement share card, using Web Share with download/copy fallbacks.
 
 Exit: documented supported content remains useful offline and audio never blocks text access.
 
