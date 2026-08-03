@@ -1,5 +1,7 @@
 # Design system
 
+The approved raster mockups in `design/mockups/approved/` are the visual source of truth. This document explains the system; when prose and a mockup differ visually, stop and surface the conflict rather than inventing a third design. Machine-readable values live in `design/design-tokens.json`.
+
 ## Principles
 
 - Map first, action clear: the route stays understandable while the primary walking action is obvious.
@@ -14,12 +16,12 @@ Tokens are starting constraints and should be implemented as CSS custom properti
 
 ```css
 :root {
-  --color-brand: #c7352f;
-  --color-brand-strong: #92251f;
-  --color-route: #176b87;
+  --color-brand: #45a914;
+  --color-brand-strong: #0b5c24;
+  --color-route: #2f9418;
   --color-surface: #ffffff;
-  --color-surface-muted: #f3f1eb;
-  --color-text: #17201f;
+  --color-surface-muted: #f6f8f1;
+  --color-text: #103d22;
   --color-text-muted: #52605e;
   --color-border: #c8cfcc;
   --color-success: #237a4b;

@@ -9,6 +9,7 @@ Start as a client-side, static, installable PWA. The fixed route and historical 
 - React, TypeScript, and Vite for the application shell.
 - MapLibre GL JS for real-map rendering without coupling domain data to a provider API.
 - GeoJSON for route geometry and stop features.
+- IndexedDB for local-first profile, walking sessions, visited stops, and offline content metadata; `localStorage` only for tiny preferences.
 - A Vite PWA plugin for manifest and service-worker integration.
 - Vitest and Testing Library for logic/components; Playwright for critical mobile flows.
 
@@ -34,6 +35,8 @@ Domain logic must not import MapLibre or browser globals. Adapters translate ext
 - `Route`: stable ID, name, ordered stop IDs, GeoJSON `LineString`, optional metadata.
 - `Stop`: stable ID, order, title, `[longitude, latitude]`, short historical summary, optional extended content.
 - `WalkingSession`: explicit status, start/end timestamps, latest accepted position, and derived metrics.
+- `LocalProfile`: display name, language, step goal, stride length/preference, audio autoplay preference, and creation timestamp.
+- `LocalizedContent`: matching Albanian and English text/audio references for each approved stop.
 
 Validate repository data at development/build time. A route is invalid when referenced stop IDs are missing, stop order is duplicated, geometry is malformed, or coordinates fall outside expected bounds.
 
@@ -45,10 +48,14 @@ Validate repository data at development/build time. A route is invalid when refe
 - Request geolocation only after an explicit user action.
 - Handle denied, unavailable, timeout, and low-accuracy results as normal states.
 - Do not upload or persist raw position history by default.
+- Treat steps as a transparent estimate from accepted GPS distance and profile stride length; do not claim access to device-wide health step counts.
+- The route geometry stays fixed, while session progress may begin from the nearest suitable point on that geometry.
 
 ## PWA and offline policy
 
 Phase 1 provides an installable shell and conservative asset caching. Do not promise offline map availability. Phase 4 will define cache eligibility, versioning, invalidation, storage limits, and map-provider terms before caching map resources or large audio.
+
+Audio/offline packages are language-specific (`sq` or `en`) so a user does not need to download both. Completion sharing should prefer the Web Share API and fall back to downloadable PNG and copied text/link.
 
 ## Testing strategy
 

@@ -24,6 +24,7 @@ Foundation phase. Product, architecture, design, roadmap, and contribution conve
 - [Roadmap](docs/roadmap.md)
 - [Architecture](docs/architecture.md)
 - [Design system](docs/design-system.md)
+- [Approved visual source of truth](design/README.md)
 - [Agent instructions](AGENTS.md)
 
 ## Proposed implementation stack

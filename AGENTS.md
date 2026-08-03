@@ -14,7 +14,8 @@ Read these files before planning work:
 2. `docs/roadmap.md`
 3. `docs/architecture.md`
 4. `docs/design-system.md`
-5. the GitHub issue for the task
+5. `design/README.md`, `design/design-tokens.json`, and the approved screen mockups/specs
+6. the GitHub issue for the task
 
 If they conflict, stop and surface the conflict. The product specification controls scope; the accepted issue controls the current increment.
 
@@ -41,6 +42,17 @@ When verification fails, diagnose, fix, and rerun the narrowest relevant check b
 - Avoid adding backend infrastructure before the product requires it.
 - Keep components accessible, responsive, and usable on narrow mobile screens.
 - Update docs and tests with behavior changes.
+
+## Pixel-perfect UI rules
+
+- Approved mockups in `design/mockups/approved/` are the visual source of truth. The agent implements the design; it does not redesign it.
+- Do not change layout hierarchy, colors, typography feel, spacing, card treatment, navigation, or icon style without explicit approval.
+- Use `design/design-tokens.json` and the relevant file in `design/screen-specs/`.
+- Use a real interactive map even where a mockup uses an illustrated map.
+- Validate UI at the 390 × 844 reference viewport, attach a screenshot, and run visual regression checks when an application test harness exists.
+- Dynamic content may change, but it must preserve the approved hierarchy and avoid overflow at 320 CSS pixels.
+- There is one fixed route. Do not introduce route discovery, multiple routes, or a route carousel.
+- The fixed route may be started from the nearest suitable point; this does not make the route editable.
 
 ## Pull requests
 
