@@ -1,0 +1,3 @@
+import type { FixedRoute } from '../domain/route';
+const stops=[['skanderbeg','Sheshi Skënderbej',19.8187,41.3275],['ethem-bey','Xhamia e Et’hem Beut',19.8211,41.3278],['castle','Kalaja e Tiranës',19.8228,41.3251],['pyramid','Piramida',19.8217,41.3205],['mother-teresa','Sheshi Nënë Tereza',19.8194,41.3177]] as const;
+export const fixedRoute:FixedRoute={id:'tirana-historike-v0',name:'Tirana Historike',fixture:true,geometry:{type:'LineString',coordinates:stops.map(([, ,lng,lat])=>[lng,lat])},stops:stops.map(([id,title,lng,lat],index)=>({id,order:index+1,title,coordinates:[lng,lat],summary:'Përmbajtje provizore — kërkon rishikim historik para publikimit.'}))};

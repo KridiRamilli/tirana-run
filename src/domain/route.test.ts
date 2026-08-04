@@ -1,0 +1,1 @@
+import {describe,expect,it} from 'vitest';import {fixedRoute} from '../data/route';import {validateRoute} from './route';describe('validateRoute',()=>{it('accepts the repository fixture',()=>expect(validateRoute(fixedRoute)).toEqual([]))});

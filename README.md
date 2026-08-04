@@ -16,7 +16,7 @@ Audio guides and stronger offline support are planned after the core route and w
 
 ## Status
 
-Foundation phase. Product, architecture, design, roadmap, and contribution conventions are documented; application implementation starts with the fixed-route map issue.
+Phase 1 implementation is in progress: a typed React/Vite PWA shell, MapLibre map, validated fixed-route fixture, and accessible stop list are available on the implementation branch.
 
 ## Documentation
 
@@ -49,7 +49,16 @@ Work is issue-driven:
 
 ## Local development
 
-Setup commands will be added when the application scaffold lands.
+Requires a current Node.js LTS release.
+
+```bash
+npm install
+npm run dev
+```
+
+Copy `.env.example` to `.env.local` to override the public MapLibre-compatible style URL. Never put private tokens in client environment files.
+
+Validation commands: `npm run lint`, `npm run typecheck`, `npm test`, and `npm run build`.
 
 ## License
 
